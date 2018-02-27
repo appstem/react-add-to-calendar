@@ -43,7 +43,7 @@ export default class helpers {
         calendarUrl += "/" + this.formatTime(event.endTime);
         calendarUrl += "&location=" + encodeURIComponent(event.location);
         calendarUrl += "&text=" + encodeURIComponent(event.title);
-        calendarUrl += "&details=" + encodeURIComponent(event.description);
+        calendarUrl += "&details=" + encodeURIComponent(event.description.replace(/\\n/g, '\n'));
         break;
 
       case "yahoo":
